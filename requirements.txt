@@ -1,0 +1,4 @@
+BartTerminal
+requests>=1.0.0
+lxml>=3.0.0
+delorean>=0.6.0
