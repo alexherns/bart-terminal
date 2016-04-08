@@ -1,5 +1,6 @@
 # bart-terminal
-usage:
+
+## Usage
 ```bash
 $ python app.py
 
@@ -13,8 +14,19 @@ $ python app.py
 <Estimate: 9 cars in 43 minutes
 ```
 
-See requirements.txt for necessary Python 2.7 packages to install.
+## Installation
+See requirements.txt for necessary Python 2.7 packages to install. You can use pip to install the packages:
+```bash
+$ pip install -r requirements.txt
+```
 
-Also, you need to set up a BART API key at http://api.bart.gov/api/register.aspx. After that, you should set an environment variable to the BART key (BART\_API\_KEY), or just hard-code your key in the app.py
+A default API key is included in the script, but I don't know if they will limit your usage if you request too often. It's easy to request a key from http://api.bart.gov/api/register.aspx. After that, you can set an environment variable to the BART key (BART\_API\_KEY). For example (using the default key):
+```bash
+$ export BART_API_KEY="MW9S-E7SL-26DU-VV8V"
+```
 
-setup.py and more features coming soon!
+## Coming soon
+- setup.py for easy installation
+- command-line flags to query your origin and direction
+- configurations to set a default origin and direction (e.g. "home" or "work" origins)
+- A curses UI?
