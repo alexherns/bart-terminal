@@ -9,9 +9,7 @@ def build_request(**kwargs):
     cmd = kwargs.get('cmd', 'etd')
     orig = kwargs.get('orig', 'DBRK')
     direction = kwargs.get('direction', 's')
-    key = kwargs.get('key', None)
-    if key == None:
-        raise Exception, "Bart api key must be provided"
+    key = kwargs.get('key', 'MW9S-E7SL-26DU-VV8V') # the default API key from their website seems to work in most cases
     url_str = 'http://api.bart.gov/api/etd.aspx?cmd={0}&orig={1}&dir={2}&key={3}'.format(
             cmd, orig, direction, key)
     return url_str
